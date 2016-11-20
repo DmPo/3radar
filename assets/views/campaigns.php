@@ -74,6 +74,6 @@
         </div>
     </div>
 </div>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArYU-cgR1BB2t3Xar1Ei_JUPFEKzZzMhA&callback=initMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArYU-cgR1BB2t3Xar1Ei_JUPFEKzZzMhA&callback=initMap"></script>
 <script src="/js/map.js"></script>
 <script src="/js/campaignCTRL.js"></script>
