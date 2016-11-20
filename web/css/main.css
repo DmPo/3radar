@@ -1,15 +1,27 @@
 .modal-header,
-.modal-footer{
+.modal-footer {
     border: 0;
 }
-.modal-header .close span{
+
+.modal-header .close span {
     font-size: 24px;
     color: tomato;
 }
-.modal-title{
+
+.modal-title {
     font-size: 18px;
     font-weight: bold;
 }
-.active-panel{
+
+.active-panel {
     border: 3px solid #007300;
+}
+
+.major-info li {
+    padding: 5px 0;
+    line-height: 1.3em;
+}
+
+select.ng-invalid, textarea.ng-invalid {
+    border-bottom: 2px solid #a70000;
 }
