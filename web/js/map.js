@@ -10,7 +10,6 @@ function initMap() {
             scrollwheel: false,
         });
 
-        var infowindow = new google.maps.InfoWindow();
         $.get("/api/campaigns_markers", function (data) {
 
             for (var i = 0; i < data.length; i++) {
