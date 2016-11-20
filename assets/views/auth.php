@@ -15,14 +15,14 @@
                 <p style="color: red; font-size: medium">{{signup_error}}</p>
 
                 <button id="signupbutton" type="button" ng-click="signup()">Зареєструватися</button>
-                <p class="message">Already registered? <a href="#">Sign In</a></p>
+                <p class="message">Вже зареєстровані? <a href="#">Увійти</a></p>
             </form>
             <form class="login-form" method="post" action="/auth">
                 <input type="email" placeholder="email" name="email"/>
-                <input type="password" placeholder="password" name="password"/>
+                <input type="password" placeholder="Пароль" name="password"/>
                 <p style="color: red; font-size: medium">{{signin_error}}</p>
-                <button>login</button>
-                <p class="message">Not registered? <a href="#">Create an account</a></p>
+                <button>Увійти</button>
+                <p class="message">Не зареєстровані? <a href="#">Створити акаунт</a></p>
             </form>
         </div>
     </div>

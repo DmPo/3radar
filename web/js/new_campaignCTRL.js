@@ -4,22 +4,24 @@ app.controller('NewCampaignCtrl', ['$scope', '$http', function ($scope, $http) {
         $scope.regions = r.data.regions;
     });
     $scope.load_districts = function () {
-        $http.get('/api/districts?region_id=' + $scope.campaign.region_id).then(function (r) {
-            $scope.districts = r.data.districts;
-            $scope.councils = null;
-            $scope.council_info = false;
-        })
+        if ($scope.campaign.region_id)
+            $http.get('/api/districts?region_id=' + $scope.campaign.region_id).then(function (r) {
+                $scope.districts = r.data.districts;
+                $scope.councils = null;
+                $scope.council_info = false;
+            })
     };
     $scope.load_councils = function () {
-        $http.get('/api/councils?district_id=' + $scope.campaign.district_id).then(function (r) {
-            $scope.councils = r.data.councils;
-            $scope.campaign.council_id = null;
-            $scope.council_info = false;
-            if (r.data.councils.length == 1) {
-                $scope.campaign.council_id = $scope.councils[0].id;
-                $scope.show_info()
-            }
-        })
+        if ($scope.campaign.district_id)
+            $http.get('/api/councils?district_id=' + $scope.campaign.district_id).then(function (r) {
+                $scope.councils = r.data.councils;
+                $scope.campaign.council_id = null;
+                $scope.council_info = false;
+                if (r.data.councils.length == 1) {
+                    $scope.campaign.council_id = $scope.councils[0].id;
+                    $scope.show_info()
+                }
+            })
     };
     $scope.show_info = function () {
         $scope.council_info = false;

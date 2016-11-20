@@ -68,7 +68,7 @@
                 <div class="form-group">
                     <label>
                         <input type="checkbox" ng-model="campaign.subscribing">
-                        Підписатися на онвлення
+                        Підписатися на оновлення
                     </label>
                 </div>
                 <div class="text-center">
