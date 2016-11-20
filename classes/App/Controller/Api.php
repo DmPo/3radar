@@ -42,7 +42,7 @@ class Api extends \App\API
         foreach ($this->request->get() as $param => $key)
             if (in_array($param, $allowed) and intval($key))
                 $model->where($param, $key);
-
+        $model->order_by('name');
         $this->data->districts = $model->execute()->as_array(true);
 
     }
@@ -54,6 +54,7 @@ class Api extends \App\API
         foreach ($this->request->get() as $param => $key)
             if (in_array($param, $allowed) and intval($key))
                 $model->where($param, $key);
+        $model->order_by('name');
         $this->data->councils = $model->execute()->as_array(true);
 
     }
@@ -165,7 +166,7 @@ class Api extends \App\API
             ->where('user_id', $this->user->id)
             ->where('campaign_id', $this->json_request->campaign_id)
             ->find();
-        if(!$user_campaign->loaded()){
+        if (!$user_campaign->loaded()) {
             $campaign_member = $this->pixie->orm->get('campaign_member');
             $campaign_member->user_id = $this->user->id;
             $campaign_member->campaign_id = $this->json_request->campaign_id;
