@@ -25,9 +25,10 @@ app.controller('NewCampaignCtrl', ['$scope', '$http', function ($scope, $http) {
     };
     $scope.show_info = function () {
         $scope.council_info = false;
-        for (var i = 0; i < $scope.councils.length; i++)
-            if ($scope.councils[i].id == $scope.campaign.council_id)
-                return $scope.council_info = $scope.councils[i];
+        if ($scope.councils)
+            for (var i = 0; i < $scope.councils.length; i++)
+                if ($scope.councils[i].id == $scope.campaign.council_id)
+                    return $scope.council_info = $scope.councils[i];
     };
     $scope.new_campaign = function () {
         $http.post('/api/new_campaign', $scope.campaign).then(function (r) {
