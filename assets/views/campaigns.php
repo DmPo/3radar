@@ -75,5 +75,5 @@
     </div>
 </div>
 <script src="/js/map.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvFfZ-1M2tlDHE48IjXw5LnZ4EyVVxdT0&callback=initMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvFfZ-1M2tlDHE48IjXw5LnZ4EyVVxdT0&callback=initMap&language=ua"></script>
 <script src="/js/campaignCTRL.js"></script>
