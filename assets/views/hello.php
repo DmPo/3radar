@@ -190,8 +190,8 @@
 <section class="section contact-section pb40">
     <div class="section-overlay"></div>
     <div class="section-center">
-        <h2 class="section-title">сontact us</h2>
-        <p>we love to help you protect your rights</p>
+        <h2 class="section-title">Зв'язок</h2>
+        <p>ми любимо допомагати захищати права</p>
         <ul class="section-social">
             <li>
                 <a href="https://www.facebook.com/3radarorg-697777160381238/" target="_blank">
@@ -204,7 +204,8 @@
                 </a>
             </li>
         </ul>
-        <div class="contact-mail">Feel free to email us: <a href="mailto:3radar.org@gmail.com">3radar.org@gmail.com</a></div>
+        <div class="contact-mail">Якщо Вам потрібна допомога, або у Вас виникла ідея партнерства, або Ви помітили помилку на нашому сайті, напишіть нам одразу: <a href="mailto:3radar.org@gmail.com">3radar.org@gmail.com</a></div>
+        <p><a href='http://www.nonviolent.solutions/'>Аґенція ненасильницьких рішень</a>, 2016</p>
     </div>
 </section>
 <script src="/js/jquery.min.js"></script>
