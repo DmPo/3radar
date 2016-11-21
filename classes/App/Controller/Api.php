@@ -129,13 +129,13 @@ class Api extends \App\API
     public function GET_update_districts()
     {
         $districts = $this->pixie->orm->get('district')
-            ->where('name', 'like', '%міська рада%')
+            ->where('lat', 'IS', $this->pixie->db->expr('NULL'))
             ->find_all();
         foreach ($districts as $district) {
             // url encode the address
-            $d_n = str_replace('міська рада', '', $district->name);
             $address = urlencode($district->region->name);
-            $url = "https://maps.google.com/maps/api/geocode/json?address={$address}&key=AIzaSyD_tlRoO7iXvivmdJ2QKHD_xHvqFRoTbko";
+            $url = "https://maps.google.com/maps/api/geocode/json?address=$address&key=AIzaSyD_tlRoO7iXvivmdJ2QKHD_xHvqFRoTbko";
+            echo $url;
             $resp_json = file_get_contents($url);
             $resp = json_decode($resp_json, true);
             $this->data->google = [];
