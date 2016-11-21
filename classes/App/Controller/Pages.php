@@ -28,6 +28,7 @@ class Pages extends \App\Page
                 $user->save();
                 return $this->redirect('/me');
             }
+            else $this->view->error = 'Не вірний email чи пароль!';
         }
     }
 
@@ -52,6 +53,7 @@ class Pages extends \App\Page
             $errors = $resp->getErrorCodes();
             $this->redirect('/auth');
         }
+
     }
 
 

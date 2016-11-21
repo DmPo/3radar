@@ -9,6 +9,8 @@
 namespace App\Controller;
 
 
+use Mailgun\Mailgun;
+
 class Api extends \App\API
 {
 
@@ -182,6 +184,19 @@ class Api extends \App\API
             $this->data = $user_campaign->as_array(true);
         }
 
+    }
+
+    public function GET_sent_test_mail()
+    {
+        $mailgun_conf = \Symfony\Component\Yaml\Yaml::parse(file_get_contents('../mailgun.yml'));
+        $mg = new Mailgun($mailgun_conf['api_key']);
+        $domain = $mailgun_conf['domain'];
+
+# Now, compose and send your message.
+        $mg->sendMessage($domain, array('from' => 'info@3radar.org',
+            'to' => 'mr.amidyshka@gmail.com',
+            'subject' => 'Дякуємо за реєстрацію на 3radar.org',
+            'text' => 'It is so simple to send a message.'));
     }
 
 }
