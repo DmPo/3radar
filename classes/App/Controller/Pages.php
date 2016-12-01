@@ -23,7 +23,7 @@ class Pages extends \App\Page
         $helper = $fb->getRedirectLoginHelper();
 
         $permissions = ['email']; // optional
-        $this->view->fb_login = $helper->getLoginUrl('http://localhost:8080/fb_oauth', $permissions);
+        $this->view->fb_login = $helper->getLoginUrl('http://3radar.org/fb_oauth', $permissions);
         $this->view->gl_login = $gl->createAuthUrl();
         if ($this->request->method == 'POST') {
             $email = strtolower($this->request->post('email'));
