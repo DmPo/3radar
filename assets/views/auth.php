@@ -37,7 +37,7 @@
                         <i class="fa fa-google" style="color: white"></i> Увійти за допомогою google
                     </a>
             </div>
-            <small><span class="small text-muted">Забули пароль? </span><a href="/recovery">Відновити</a></small>
+            <p><span class="small text-muted">Забули пароль? </span><a href="/recovery">Відновити</a></p>
         </div>
     </div>
 </div>
