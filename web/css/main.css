@@ -25,3 +25,9 @@
 select.ng-invalid, textarea.ng-invalid {
     border-bottom: 2px solid #a70000;
 }
+.social{
+    line-height: 3em;
+}
+.social a{
+    width: 300px;
+}

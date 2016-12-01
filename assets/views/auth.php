@@ -16,18 +16,28 @@
 
                 <button id="signupbutton" type="button" ng-click="signup()">Зареєструватися</button>
                 <p class="message">Вже зареєстровані? <a href="#">Увійти</a></p>
+
             </form>
             <form class="login-form" method="post" action="/auth">
-
                 <input type="email" placeholder="email" name="email"/>
                 <input type="password" placeholder="Пароль" name="password"/>
                 <p style="color: red; font-size: medium">{{signin_error}}</p>
-                <?php if(isset($error)):?>
-                    <p style="color: red; font-size: medium"> <?=$error?> </p>
-                <?php endif;?>
+                <?php if (isset($error)): ?>
+                    <p style="color: red; font-size: medium"> <?= $error ?> </p>
+                <?php endif; ?>
                 <button>Увійти</button>
                 <p class="message">Не зареєстровані? <a href="#">Створити акаунт</a></p>
             </form>
+
+            <div class="social">
+                    <a href="<?= $fb_login ?>" class="btn btn-primary" >
+                        <i class="fa fa-facebook" style="color: white"></i> Увійти за допомогою facebook
+                    </a>
+                    <a href="<?= $gl_login ?>" class="btn btn-danger" >
+                        <i class="fa fa-google" style="color: white"></i> Увійти за допомогою google
+                    </a>
+            </div>
+            <small><span class="small text-muted">Забули пароль? </span><a href="/recovery">Відновити</a></small>
         </div>
     </div>
 </div>

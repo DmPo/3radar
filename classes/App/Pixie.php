@@ -21,6 +21,20 @@ class Pixie extends \PHPixie\Pixie {
 		'orm' => '\PHPixie\ORM'
 	);
 
+    /**
+     * @param int $length
+     * @return string
+     */
+    public function random_string($length = 10) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    }
+
 	protected function after_bootstrap() {
 	}
 //    public function handle_exception($exception)

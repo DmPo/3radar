@@ -6,16 +6,20 @@ namespace App;
  * Base controller
  *
  * @property-read \App\Pixie $pixie Pixie dependency container
+ * @property-read \App\Oauth $oauth Oauth dependency container
  */
 class Page extends \PHPixie\Controller
 {
 
     protected $view;
     protected $user;
+    protected $oauth;
 
     public function before()
     {
         $this->view->user = $this->user;
+        $this->view->title = '';
+        $this->oauth = new Oauth();
     }
 
     public function after()
@@ -26,7 +30,7 @@ class Page extends \PHPixie\Controller
     public function run($action)
     {
         $full_action = 'action_' . $action;
-        $public_actions = ['reg', 'auth', 'index'];
+        $public_actions = ['reg', 'auth', 'index', 'gl_oauth', 'fb_oauth', 'recovery', 'newpass'];
         $this->user = $this->pixie->auth->user();
         if (!method_exists($this, $full_action))
             throw new \PHPixie\Exception\PageNotFound("Method {$full_action} doesn't exist in " . get_class($this));
@@ -44,5 +48,6 @@ class Page extends \PHPixie\Controller
         if ($this->execute)
             $this->after();
     }
+
 
 }

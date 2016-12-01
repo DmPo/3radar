@@ -1,13 +1,13 @@
 <?php
-return array(
-    'default' => array(
+return [
+    'default' => [
         'model' => 'user',
-        'login' => array(
-            'password' => array(
+        'login' => [
+            'password' => [
                 'login_field' => 'email',
                 'password_field' => 'password',
                 'login_token_field' => 'token'
-            ),
-        ),
-    )
-);
+            ]
+        ]
+    ]
+];
