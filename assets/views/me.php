@@ -35,7 +35,7 @@
         </div>
         <div class="col-sm-6">
             <div class="panel panel-info">
-                <div class="panel-heading">Кампанії, в яких я беру учать</div>
+                <div class="panel-heading">Кампанії, в яких я беру участь</div>
                 <div class="panel-body">
                     <ul class="media-list">
                         <?php foreach ($user->campaigns->find_all() as $campaign):?>
