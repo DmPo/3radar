@@ -2,7 +2,7 @@
 
 <div class="container" ng-app="ZradarApp" ng-controller="campaignCtrl">
     <?php if(!$single_company):?>
-    <h3 class="h3 text-center">Створені кампанії</h3>
+    <h3 class="h3 text-center">Existing campaigns</h3>
     <section class="section-map">
         <div id="map"></div>
     </section>
@@ -18,26 +18,26 @@
                 </p>
                 <p> <?= $campaign->council->major_bio ?></p>
                 <p>
-                    <strong>На посаді з </strong><?= $campaign->council->selection_date ?>
+                    <strong>In the office since </strong><?= $campaign->council->selection_date ?>
                 </p>
                 <p>
-                    <strong>Причина:</strong>
+                    <strong>Campaign reason:</strong>
                     <?= $campaign->reason ?>
                 </p>
                 <p style="font-size: 14px; font-weight: normal;">
-                    <strong>Додаткова інформація:</strong>
+                    <strong>Details:</strong>
                     <?= $campaign->description ?>
                 </p>
                 <span class="pull-right">
-                    Приєдналось:
+                    Participating:
                     <label class="badge"><?= $campaign->members->count_all() ?></label>
                 </span>
                 <?php if (!$campaign->members->where('user_id', $user->id)->find()->loaded() && $campaign->author->id != $user->id): ?>
                     <button class="btn btn-default" data-toggle="modal" data-target="#join-modal"
-                            ng-click="select_campaign(<?= $campaign->id ?>)">Приєднатись
+                            ng-click="select_campaign(<?= $campaign->id ?>)">Join
                     </button>
                 <?php else:; ?>
-                    <button class="btn btn-default" data-toggle="modal" data-target="#join-modal" disabled> ви уже в кампанії</button>
+                    <button class="btn btn-default" data-toggle="modal" data-target="#join-modal" disabled> you are already taking part</button>
                 <?php endif; ?>
             </div>
         </div>
@@ -49,24 +49,24 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="join-modal">Приєднання до кампанії</h4>
+                        <h4 class="modal-title" id="join-modal">Join campaign</h4>
                     </div>
                     <div class="modal-body">
                         <form action="">
                             <div class="form-group">
-                                <textarea class="form-control" rows="3" placeholder="Причина"
+                                <textarea class="form-control" rows="3" placeholder="Reason"
                                           ng-model="description"></textarea>
                             </div>
                             <div class="form-group">
-                                <label><input type="checkbox" ng-model="subscribing"> Підписати на оновлення </label>
+                                <label><input type="checkbox" ng-model="subscribing"> Subscribe for updates</label>
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
                         <button type="reset" class="btn btn-default" data-dismiss="modal" ng-click="description = ''">
-                            Відміннити
+                            Reset
                         </button>
-                        <button type="button" class="btn btn-primary" ng-click="connect_to_campaign()">Приєднатися
+                        <button type="button" class="btn btn-primary" ng-click="connect_to_campaign()">Join
                         </button>
                     </div>
                 </form>
