@@ -4,7 +4,7 @@
         <div class="form">
             <h2 class="h2">Enter new password</h2>
             <form class="login-form" method="post">
-                <input placeholder="Новий пароль" name="password"/>
+                <input placeholder="New password" name="password"/>
                 <?php if(isset($error)):?>
                     <p style="color: red; font-size: medium"> <?=$error?> </p>
                 <?php endif;?>
