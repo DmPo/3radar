@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="panel panel-success">
-                <div class="panel-heading">Мої кампанії</div>
+                <div class="panel-heading">My campaigns</div>
                 <div class="panel-body">
                     <ul class="media-list">
                         <?php foreach ($user->my_campaigns->find_all() as $campaign):?>
@@ -23,7 +23,7 @@
                                 </p>
                                 <p><?=$campaign->reason?></p>
                                 <span class=" pull-right">
-                                    <small>Приєдналось <label class="badge"><?=$campaign->members->count_all()?></label> </small>
+                                    <small>Participants <label class="badge"><?=$campaign->members->count_all()?></label> </small>
                                 </span>
                             </div>
                             <hr>
@@ -35,7 +35,7 @@
         </div>
         <div class="col-sm-6">
             <div class="panel panel-info">
-                <div class="panel-heading">Кампанії, в яких я беру участь</div>
+                <div class="panel-heading">Campaigns I take part in</div>
                 <div class="panel-body">
                     <ul class="media-list">
                         <?php foreach ($user->campaigns->find_all() as $campaign):?>
@@ -54,7 +54,7 @@
                                         <?= $campaign->council->name ?>
                                     </p>
                                     <span class=" pull-right">
-                                    <small>Приєдналось <label class="badge"><?=$campaign->members->count_all()?></label></small>
+                                    <small>Participants <label class="badge"><?=$campaign->members->count_all()?></label></small>
                                 </span>
                                 </div>
                                 <hr>
