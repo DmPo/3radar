@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>3radar</title>
+    <title>CivicOS</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -16,10 +16,10 @@
         <div class='cover-filter'></div>
         <div class='cover-container'>
             <div class='cover-wrapper'>
-                <h1 class='title'>3radar.org</h1>
-                <p class='cover-description'>прибираємо зрадників. комфортно та весело.</p>
+                <h1 class='title'>CivicOS.net</h1>
+                <p class='cover-description'>piloting civic campaign data integration</p>
                 <div class="main-button">
-                    <a href='/me'>відкликати мера</a>
+                    <a href='/me'>join</a>
                 </div>
             </div>
         </div>
@@ -35,9 +35,7 @@
         <div class='row'>
             <div class='col-md-10 col-md-offset-1'>
                 <p class='big-text'>
-                    3radar.org <span class="description">допомагає
-                    об'єднуватись громадянам, які незадоволені роботою обранців. Наш сервіс позбавляє
-                    корумпованих політиків сенсу "робити бізнес" на владі.</span>
+                    CivicOS.net <span class="description">is developing and testing nonviolent campaign data description standard.</span>
                 </p>
             </div>
         </div>
@@ -45,23 +43,23 @@
             <ul class='statistic-item'>
                 <li>
                     <img src='https://static.tildacdn.com/tild3838-3732-4161-b461-363562616163/moneyl.png'>
-                    <h3>Гроші</h3>
-                    <p>Вони "інвестують" у вибори, а потім відбивають такі "інвестиції" на хабарях та відкатах.</p>
+                    <h3>Money</h3>
+                    <p>Millions of Dollars and Euros are spent annualy to help develop democracy around the world. Unfortunalely, in many cases this assistance is actually helping usurpers pretend they are democrats. Funds can be spent more efficiently.</p>
                 </li>
                 <li>
                     <img src='https://static.tildacdn.com/0efe83b2-ea85-41be-a16d-e491339a8559/placel.png'>
-                    <h3>Посада</h3>
-                    <p>Вони використовують строк перебування на посаді для "заробітку"та повернення "інвестицій".</p>
+                    <h3>Organizations</h3>
+                    <p>Most of the organizations can actually fit on one couch. It is not a problem. The problem is when the only place they spend time is the coach.</p>
                 </li>
                 <li>
                     <img src='https://static.tildacdn.com/289c6bfa-02af-4579-955b-6a8f4a242f1b/effiencyl.png'>
-                    <h3>Ефективність</h3>
-                    <p>Якщо вони не встигатимуть повертати інвестиції, вони втратять сенс такого "бізнесу".</p>
+                    <h3>Efficiency</h3>
+                    <p>Changes happen when people and organizations communicate and cooperate efficiently. To make this happen data must be not only open, but also integrated.</p>
                 </li>
                 <li>
                     <img src='https://static.tildacdn.com/tild3638-6163-4564-b537-306463313237/timel.png'>
-                    <h3>Час</h3>
-                    <p>Тому громадянам треба мати можливість зменшити строк зловживання посадами й виходу на "точку окупності" політичного "бізнесу".</p>
+                    <h3>Time</h3>
+                    <p>Dictators are usually weaker than people think of them. They just can act faster. Time is not only money, but also power. Civic action data integration can help change this.</p>
                 </li>
             </ul>
         </div>
