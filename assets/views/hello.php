@@ -81,6 +81,8 @@
                     <p>4. It is a project in the making, which means it is far from the ideal yet.</p>
                     <p>5. It is a human idea, which means every human being can participate.</p>                               
                     <p>6. It is based on the experiences of successes and failures, which means your experiences can be of great importance too.</p>
+                    <p>7. Here we are developing the standard and also are testing it, which means you can either try test it yourself or help us develop/test it here.</p>
+                    <p>8. We are demand driven, which means the more you <a href="mailto:dimopot@gmail.com">contact</a> us, the faster the project will develop.</p>
                 </div>
             </div>
         </div>
