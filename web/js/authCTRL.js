@@ -10,19 +10,19 @@ app.controller('AuthCtrl', ['$scope', '$http', function ($scope, $http) {
 
         var user = $scope.user;
         if ($scope.signUpForm.$invalid)
-            return $scope.signup_error = 'Перевірте вірність заповнення форми!';
+            return $scope.signup_error = 'Please check if the form is filled out correctly.';
         if (user.email && user.first_name && user.last_name && user.password )
             $http.get('/api/check_email?email=' + user.email).then(function (r) {
                 if (r.data.free) {
                     $('form[name=signUpForm]').submit();
                     $scope.signup_error = '';
                 }
-                else  $scope.signup_error = 'Email вже зайнято, спробуйте авторизуватися!'
+                else  $scope.signup_error = 'This email is already used, please try to log in.'
 
             }, function () {
 
             })
-        else  $scope.signup_error = 'Заповніть всі поля форми!'
+        else  $scope.signup_error = 'Please fill out all fields of the form.'
     }
 
 }]);
