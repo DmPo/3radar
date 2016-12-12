@@ -164,11 +164,11 @@ class Pages extends \App\Page
 
     public function action_recovery()
     {
-        $this->view->title = '- Відновлення паролю';
+        $this->view->title = '- Password recovery';
         if ($this->pixie->auth->user())
             $this->redirect('/');
         if ($this->request->param('id') == 'error_token')
-            $this->view->message = 'Невірний токен!';
+            $this->view->message = 'Wrong token';
         if ($this->request->method == 'POST') {
             $email = $this->request->post('email');
             $user = $this->pixie->orm->get('user')->where('email', $email)->find();
@@ -177,14 +177,14 @@ class Pages extends \App\Page
                 $user->reset_token = $token;
                 $user->token_created_at = $this->pixie->db->expr('now()');
                 $user->save();
-                $html = "<h2>Відновлення доступу | Password reset</h2>" .
-                    "<p>перейдіть за <a href='http://3radar.org/newpass/{$token}'>посиланням</a> </p>" .
-                    "<p>click at : <a href='http://3radar.org/newpass/{$token}'>link</a> </p>" .
-                    "<p>http://3radar.org/newpass/{$token}</p>";
-                Mail::sendMessage($user->email, 'Відновлення доступу, Password reset', $html);
-                $this->view->message = 'Відправлено на пошту!';
+                $html = "<h2>Password reset</h2>" .
+                    "<p>follow <a href='http://civicos.net/newpass/{$token}'>the link</a> </p>" .
+                    "<p>click at : <a href='http://civicos.net/newpass/{$token}'>link</a> </p>" .
+                    "<p>http://civicos.net/newpass/{$token}</p>";
+                Mail::sendMessage($user->email, 'Password reset', $html);
+                $this->view->message = 'Emailed';
             } else {
-                $this->view->error = 'Користувача не знайдено!';
+                $this->view->error = 'No such user found.';
             }
         }
     }
