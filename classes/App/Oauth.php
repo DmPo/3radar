@@ -38,7 +38,7 @@ class Oauth
         $client->setAuthConfig('../client_secret.json');
         $client->addScope(\Google_Service_Oauth2::USERINFO_EMAIL);
         $client->addScope(\Google_Service_Oauth2::USERINFO_PROFILE);
-        $client->setRedirectUri('http://3radar.org/gl_oauth');
+        $client->setRedirectUri('http://civicos.net/gl_oauth');
         return $client;
     }
 }
