@@ -20,18 +20,18 @@
             </form>
             <form class="login-form" method="post" action="/auth">
                 <input type="email" placeholder="email" name="email"/>
-                <input type="password" placeholder="Пароль" name="password"/>
+                <input type="password" placeholder="password" name="password"/>
                 <p style="color: red; font-size: medium">{{signin_error}}</p>
                 <?php if (isset($error)): ?>
                     <p style="color: red; font-size: medium"> <?= $error ?> </p>
                 <?php endif; ?>
-                <button>Увійти</button>
+                <button>Enter</button>
                 <p class="message">Not registered? <a href="#">New account</a></p>
             </form>
 
             <div class="social">
                     <a href="<?= $fb_login ?>" class="btn btn-primary" >
-                        <i class="fa fa-facebook" style="color: white"></i> Log in with your Facebook account
+                        <i class="fa fa-facebook" style="color: white"></i>Log in with your Facebook account
                     </a>
                     <a href="<?= $gl_login ?>" class="btn btn-danger" >
                         <i class="fa fa-google" style="color: white"></i>Log in with your Google account
