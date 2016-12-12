@@ -37,7 +37,7 @@ class Pages extends \App\Page
                 $user->last_sign_in = $this->pixie->db->expr('now()');
                 $user->save();
                 return $this->redirect('/me');
-            } else $this->view->error = 'Не вірний email чи пароль!';
+            } else $this->view->error = 'Wrong email or password.';
         }
     }
 
